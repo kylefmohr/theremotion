@@ -63,6 +63,8 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
     env:
       LEAPSDK_LIB_PATH: ${{ github.workspace }}/leap-sdk-redist/${{ matrix.leapsdk-lib-path }}
+      FORCE_SKIA_BUILD: 1  # Force Skia to build from source
+      PYTHON_VERSION: '3.10' # Use python 3.10
 
     steps:
     - uses: actions/checkout@v4
@@ -79,6 +81,11 @@ jobs:
     - name: Install cargo wix
       run: cargo install cargo-wix
       if: ${{ matrix.wix }}
+    - name: Set up Python
+      if: matrix.runs-on == 'macos-latest'
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
     - name: Build
       run: cargo build --release
     - name: Outside of a release, override the wix version
@@ -140,3 +147,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           
+fail-fast: false
