@@ -22,7 +22,7 @@ tracing-subscriber = "0.3"
 cpal = "0.15"
 faust-types = { git = "https://github.com/Frando/rust-faust", branch = "main" }
 faust-state = { git = "https://github.com/Frando/rust-faust", branch = "main" }
-leaprs = { version = "0.2", default-features = false, features = [
+leaprs = { version = "0.2.2", default-features = false, features = [
     "nalgebra",
 ], optional = true }
 nalgebra = "0.32"
