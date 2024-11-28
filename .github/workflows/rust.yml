@@ -32,6 +32,7 @@ jobs:
         run: cargo test --no-default-features
   build:
     strategy:
+      fail-fast: false
       matrix:
         include:
           - name: windows
@@ -146,5 +147,5 @@ jobs:
       - uses: fastify/github-action-merge-dependabot@v3.9.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          
+
 fail-fast: false
