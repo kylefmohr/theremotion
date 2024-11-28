@@ -65,7 +65,7 @@ jobs:
             portable-name: theremotion-macos.zip
             redists: libLeapC.dylib
     name: build
-    if: eq(${{ github.repository }}, "plule/theremotion") # no secrets in clones
+    #if: eq(${{ github.repository }}, "plule/theremotion") # no secrets in clones
     runs-on: ${{ matrix.runs-on }}
     env:
       LEAPSDK_LIB_PATH: ${{ github.workspace }}/leap-sdk-redist/${{ matrix.leapsdk-lib-path }}
