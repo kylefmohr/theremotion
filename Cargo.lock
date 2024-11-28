@@ -1456,9 +1456,9 @@ dependencies = [
 [[package]]
 name = "faust-state"
 version = "0.1.0"
-source = "git+https://github.com/Frando/rust-faust?branch=main#63c0421a366893e709fa7a7d397103c33febc1fa"
+source = "git+https://github.com/kylefmohr/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
 dependencies = [
- "faust-types",
+ "faust-types 0.1.0 (git+https://github.com/kylefmohr/rust-faust?branch=main)",
  "rtrb",
 ]
 
@@ -1466,6 +1466,15 @@ dependencies = [
 name = "faust-types"
 version = "0.1.0"
 source = "git+https://github.com/Frando/rust-faust?branch=main#63c0421a366893e709fa7a7d397103c33febc1fa"
+dependencies = [
+ "jack",
+ "libm",
+]
+
+[[package]]
+name = "faust-types"
+version = "0.1.0"
+source = "git+https://github.com/kylefmohr/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
 dependencies = [
  "jack",
  "libm",
@@ -2497,9 +2506,9 @@ checksum = "23603c7542c3b4b3b6fd83c7fe267a744f33573ec242ef150f4388e12ae52562"
 
 [[package]]
 name = "leaprs"
-version = "0.2.0"
+version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4e9e86d11260cf135ce001af9cc883fb933e59c27c1790d88d532fe9c8496e1d"
+checksum = "85b87d360e54f7b2692e728fcd8ec9788589bbbc178193fd05011b4f6b8c99ec"
 dependencies = [
  "bitflags 2.4.1",
  "derive_deref",
@@ -4349,7 +4358,7 @@ dependencies = [
  "derive_more",
  "directories",
  "faust-state",
- "faust-types",
+ "faust-types 0.1.0 (git+https://github.com/kylefmohr/rust-faust?branch=main)",
  "itertools 0.11.0",
  "lazy_static",
  "leaprs",
@@ -4376,7 +4385,7 @@ version = "1.7.3"
 dependencies = [
  "default-boxed",
  "faust-build",
- "faust-types",
+ "faust-types 0.1.0 (git+https://github.com/Frando/rust-faust?branch=main)",
 ]
 
 [[package]]
