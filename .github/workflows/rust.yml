@@ -102,6 +102,9 @@ jobs:
       run: |
         brew install llvm
         echo "/usr/local/opt/llvm/bin" >> $GITHUB_PATH
+        # Install LeapC library
+        sudo cp leap-sdk-redist/LeapSDK/lib/libLeapC.5.dylib /usr/local/lib/
+        sudo update_dyld_shared_cache
     - name: Build
       run: cargo build --release
     - name: Build for Apple Silicon
