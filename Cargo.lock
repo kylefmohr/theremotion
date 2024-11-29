@@ -1456,9 +1456,9 @@ dependencies = [
 [[package]]
 name = "faust-state"
 version = "0.1.0"
-source = "git+https://github.com/kylefmohr/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
+source = "git+https://github.com/Frando/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
 dependencies = [
- "faust-types 0.1.0 (git+https://github.com/kylefmohr/rust-faust?branch=main)",
+ "faust-types 0.1.0 (git+https://github.com/Frando/rust-faust?branch=main)",
  "rtrb",
 ]
 
@@ -1474,7 +1474,7 @@ dependencies = [
 [[package]]
 name = "faust-types"
 version = "0.1.0"
-source = "git+https://github.com/kylefmohr/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
+source = "git+https://github.com/Frando/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
 dependencies = [
  "jack",
  "libm",
@@ -4358,7 +4358,7 @@ dependencies = [
  "derive_more",
  "directories",
  "faust-state",
- "faust-types 0.1.0 (git+https://github.com/kylefmohr/rust-faust?branch=main)",
+ "faust-types 0.1.0 (git+https://github.com/Frando/rust-faust?branch=main)",
  "itertools 0.11.0",
  "lazy_static",
  "leaprs",
