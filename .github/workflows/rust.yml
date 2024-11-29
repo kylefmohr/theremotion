@@ -63,7 +63,7 @@ jobs:
             exe-name: theremotion
             portable-type: zip
             portable-name: theremotion-macos.zip
-            redists: libLeapC.dylib
+            redists: libLeapC.5.dylib
     name: build
     #if: eq(${{ github.repository }}, "plule/theremotion") # no secrets in clones
     runs-on: ${{ matrix.runs-on }}
@@ -97,6 +97,11 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: ${{ env.PYTHON_VERSION }}
+    - name: Install llvm from Homebrew
+      if: matrix.runs-on == 'macos-13'
+      run: |
+        brew install llvm
+        echo "/usr/local/opt/llvm/bin" >> $GITHUB_PATH
     - name: Build
       run: cargo build --release
     - name: Build for Apple Silicon
