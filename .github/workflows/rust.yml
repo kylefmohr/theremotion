@@ -58,7 +58,7 @@ jobs:
             portable-name: theremotion-linux.tar.gz
           - name: macos # Added macOS build
             runs-on: macos-13
-            leapsdk-lib-path: LeapSDK
+            leapsdk-lib-path: LeapSDK/lib
             leapsdk-ref: macos-gemini
             exe-name: theremotion
             portable-type: zip
