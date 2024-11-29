@@ -1446,8 +1446,8 @@ checksum = "25cbce373ec4653f1a01a31e8a5e5ec0c622dc27ff9c4e6606eefef5cbbed4a5"
 
 [[package]]
 name = "faust-build"
-version = "0.1.0"
-source = "git+https://github.com/Frando/rust-faust?branch=main#63c0421a366893e709fa7a7d397103c33febc1fa"
+version = "0.2.1"
+source = "git+https://github.com/Frando/rust-faust?branch=main#f09f2fffaa1620a6231d30e50d531d91f1991867"
 dependencies = [
  "heck 0.3.3",
  "tempfile",
@@ -1455,17 +1455,17 @@ dependencies = [
 
 [[package]]
 name = "faust-state"
-version = "0.1.0"
-source = "git+https://github.com/Frando/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
+version = "0.2.1"
+source = "git+https://github.com/Frando/rust-faust?branch=main#f09f2fffaa1620a6231d30e50d531d91f1991867"
 dependencies = [
- "faust-types 0.1.0 (git+https://github.com/Frando/rust-faust?branch=main)",
+ "faust-types 0.2.1 (git+https://github.com/Frando/rust-faust?branch=main)",
  "rtrb",
 ]
 
 [[package]]
 name = "faust-types"
-version = "0.1.0"
-source = "git+https://github.com/Frando/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
+version = "0.2.1"
+source = "git+https://github.com/Frando/rust-faust?branch=main#f09f2fffaa1620a6231d30e50d531d91f1991867"
 dependencies = [
  "jack",
  "libm",
@@ -4349,7 +4349,7 @@ dependencies = [
  "derive_more",
  "directories",
  "faust-state",
- "faust-types 0.1.0 (git+https://github.com/Frando/rust-faust?branch=main)",
+ "faust-types 0.2.1 (git+https://github.com/Frando/rust-faust?branch=main)",
  "itertools 0.11.0",
  "lazy_static",
  "leaprs",
@@ -4376,7 +4376,7 @@ version = "1.7.3"
 dependencies = [
  "default-boxed",
  "faust-build",
- "faust-types 0.1.0 (git+https://github.com/Frando/rust-faust?branch=main)",
+ "faust-types 0.2.1 (git+https://github.com/Frando/rust-faust?branch=main)",
 ]
 
 [[package]]
