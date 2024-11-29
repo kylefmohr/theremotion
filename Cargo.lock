@@ -1465,15 +1465,6 @@ dependencies = [
 [[package]]
 name = "faust-types"
 version = "0.1.0"
-source = "git+https://github.com/Frando/rust-faust?branch=main#63c0421a366893e709fa7a7d397103c33febc1fa"
-dependencies = [
- "jack",
- "libm",
-]
-
-[[package]]
-name = "faust-types"
-version = "0.1.0"
 source = "git+https://github.com/Frando/rust-faust?branch=main#24cb47ffaa705c88e3be588f0ca9ddba1c4504cd"
 dependencies = [
  "jack",
