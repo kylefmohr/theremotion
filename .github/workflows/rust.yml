@@ -15,7 +15,7 @@ jobs:
   tests:
     strategy:
       matrix:
-        runs-on: [windows-latest, ubuntu-latest, macos-latest] # Added macos-latest
+        runs-on: [windows-latest, ubuntu-latest, macos-13] # Added macos-13
     name: tests
     runs-on: ${{ matrix.runs-on }}
     steps:
@@ -57,7 +57,7 @@ jobs:
             portable-type: tar
             portable-name: theremotion-linux.tar.gz
           - name: macos # Added macOS build
-            runs-on: macos-latest
+            runs-on: macos-13
             leapsdk-lib-path: LeapSDK/lib
             leapsdk-ref: macos-gemini
             exe-name: theremotion
@@ -93,24 +93,24 @@ jobs:
       run: cargo install cargo-wix
       if: ${{ matrix.wix }}
     - name: Set up Python
-      if: matrix.runs-on == 'macos-latest'
+      if: matrix.runs-on == 'macos-13'
       uses: actions/setup-python@v4
       with:
         python-version: ${{ env.PYTHON_VERSION }}
     - name: Build
       run: cargo build --release
     - name: Build for Apple Silicon
-      if: matrix.runs-on == 'macos-latest'
+      if: matrix.runs-on == 'macos-13'
       run: |
         rustup target add aarch64-apple-darwin
         cargo build --release --target aarch64-apple-darwin
     - name: Build for Intel Mac
-      if: matrix.runs-on == 'macos-latest'
+      if: matrix.runs-on == 'macos-13'
       run: |
         rustup target add x86_64-apple-darwin
         cargo build --release --target x86_64-apple-darwin
     - name: Create Universal Binary
-      if: matrix.runs-on == 'macos-latest'
+      if: matrix.runs-on == 'macos-13'
       run: |
         mkdir -p target/release
         lipo -create \
